@@ -1,4 +1,4 @@
-package Domain;
+package ssvv.example.Domain;
 
 import java.time.LocalDateTime;
 

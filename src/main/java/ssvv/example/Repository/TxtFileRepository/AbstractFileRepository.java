@@ -1,23 +1,23 @@
-package Repository.TxtFileRepository;
+package ssvv.example.Repository.TxtFileRepository;
 
-import Domain.HasId;
-import Repository.MemoryRepository.AbstractCrudRepo;
-import Validator.IValidator;
-import Exceptions.ValidatorException;
-import Exceptions.RepositoryException;
-import java.io.IOException;
+import ssvv.example.Domain.HasId;
+import ssvv.example.Exceptions.RepositoryException;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.MemoryRepository.AbstractCrudRepo;
+import ssvv.example.Validator.IValidator;
+
 import java.io.*;
 
 public abstract class AbstractFileRepository<ID,E extends HasId<ID>> extends AbstractCrudRepo<ID,E> {
     private String filename;
 
-    public AbstractFileRepository(IValidator v,String filename) {
+    public AbstractFileRepository(IValidator v, String filename) {
         super(v);
         this.filename=filename;
         //readFromFile();
     }
 
-    private void writeAll() throws IOException{
+    private void writeAll() throws IOException {
         DataOutputStream out = new DataOutputStream(new FileOutputStream(filename));
         super.findAll().forEach(x-> { try { out.writeChars(x.toString()); } catch (IOException e) { e.printStackTrace(); } });
 

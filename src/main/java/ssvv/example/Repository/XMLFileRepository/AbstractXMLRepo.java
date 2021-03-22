@@ -1,19 +1,20 @@
-package Repository.XMLFileRepository;
+package ssvv.example.Repository.XMLFileRepository;
 
-import Domain.HasId;
-import Exceptions.ValidatorException;
-import Repository.MemoryRepository.AbstractCrudRepo;
-import Validator.IValidator;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
+import ssvv.example.Domain.HasId;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.MemoryRepository.AbstractCrudRepo;
+import ssvv.example.Validator.IValidator;
+import org.w3c.dom.Element;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
+
+
 
 public abstract class AbstractXMLRepo<ID,E extends HasId<ID>> extends AbstractCrudRepo<ID,E> {
     private String fileName;
@@ -26,7 +27,7 @@ public abstract class AbstractXMLRepo<ID,E extends HasId<ID>> extends AbstractCr
 
     protected abstract E createEntityFromElement(Element entityElement);
 
-    protected abstract Element createElementFromEntity(Document document,E e);
+    protected abstract Element createElementFromEntity(Document document, E e);
 
     protected Element createElement(String tag, Document doc, String value){
         Element e = (Element) doc.createElement(tag);

@@ -1,10 +1,10 @@
-package Repository.TxtFileRepository;
+package ssvv.example.Repository.TxtFileRepository;
 
-import Domain.HasId;
-import Domain.Student;
-import Validator.StudentValidator;
+import ssvv.example.Domain.HasId;
+import ssvv.example.Domain.Student;
+import ssvv.example.Validator.StudentValidator;
 
-import java.io.*;
+import java.io.IOException;
 
 public class StudentFileRepo extends AbstractFileRepository {
     public StudentFileRepo(String filename, StudentValidator val) throws IOException {

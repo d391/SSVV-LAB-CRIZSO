@@ -1,6 +1,6 @@
-package Domain;
+package ssvv.example.Domain;
 
-import Domain.HasId;
+
 
 public class TemaLab implements HasId<Integer> {
     private int nr;

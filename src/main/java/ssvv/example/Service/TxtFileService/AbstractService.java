@@ -1,9 +1,10 @@
-package Service.TxtFileService;
+package ssvv.example.Service.TxtFileService;
 
-import Domain.HasId;
-import Exceptions.ValidatorException;
-import Repository.TxtFileRepository.AbstractFileRepository;
-import Validator.IValidator;
+
+import ssvv.example.Domain.HasId;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.TxtFileRepository.AbstractFileRepository;
+import ssvv.example.Validator.IValidator;
 
 public abstract  class AbstractService <ID,E extends HasId<ID>> {
     private IValidator<E> v;

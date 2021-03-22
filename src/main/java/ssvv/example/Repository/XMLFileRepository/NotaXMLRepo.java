@@ -1,9 +1,9 @@
-package Repository.XMLFileRepository;
+package ssvv.example.Repository.XMLFileRepository;
 
-import Domain.Nota;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import Validator.NotaValidator;
+import ssvv.example.Domain.Nota;
+import ssvv.example.Validator.NotaValidator;
 
 import java.time.LocalDateTime;
 

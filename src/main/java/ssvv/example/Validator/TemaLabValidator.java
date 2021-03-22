@@ -1,7 +1,8 @@
-package Validator;
-import Exceptions.ValidatorException;
-import Domain.TemaLab;
-import Validator.IValidator;
+package ssvv.example.Validator;
+
+
+import ssvv.example.Domain.TemaLab;
+import ssvv.example.Exceptions.ValidatorException;
 
 public class TemaLabValidator implements IValidator<TemaLab> {
 

@@ -1,4 +1,4 @@
-package Domain;
+package ssvv.example.Domain;
 
 public class Student implements HasId<String> {
     private  String id;

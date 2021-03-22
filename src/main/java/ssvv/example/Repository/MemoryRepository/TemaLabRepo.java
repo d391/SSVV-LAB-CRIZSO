@@ -1,8 +1,9 @@
-package Repository.MemoryRepository;
-import Validator.IValidator;
-import Domain.TemaLab;
+package ssvv.example.Repository.MemoryRepository;
 
-public class TemaLabRepo extends AbstractCrudRepo<Integer,TemaLab> {
+import ssvv.example.Domain.TemaLab;
+import ssvv.example.Validator.IValidator;
+
+public class TemaLabRepo extends AbstractCrudRepo<Integer, TemaLab> {
 
     public TemaLabRepo(IValidator<TemaLab> v){
 

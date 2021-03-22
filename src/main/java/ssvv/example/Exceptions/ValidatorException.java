@@ -1,4 +1,4 @@
-package Exceptions;
+package ssvv.example.Exceptions;
 
 public class ValidatorException extends Exception {
     public ValidatorException(String s){

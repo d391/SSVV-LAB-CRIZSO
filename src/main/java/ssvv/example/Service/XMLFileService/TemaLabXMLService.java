@@ -1,10 +1,10 @@
-package Service.XMLFileService;
+package ssvv.example.Service.XMLFileService;
 
-import Domain.TemaLab;
-import Exceptions.ValidatorException;
-import Repository.XMLFileRepository.TemaLabXMLRepo;
+import ssvv.example.Domain.TemaLab;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.XMLFileRepository.TemaLabXMLRepo;
 
-public class TemaLabXMLService extends AbstractXMLService<Integer,TemaLab>{
+public class TemaLabXMLService extends AbstractXMLService<Integer, TemaLab>{
     private TemaLabXMLRepo xmlrepo;
 
     public TemaLabXMLService(TemaLabXMLRepo xmlrepo)  {

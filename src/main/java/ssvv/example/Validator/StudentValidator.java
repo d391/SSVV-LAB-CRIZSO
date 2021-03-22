@@ -1,6 +1,7 @@
-package Validator;
-import Exceptions.ValidatorException;
-import Domain.Student;
+package ssvv.example.Validator;
+
+import ssvv.example.Domain.Student;
+import ssvv.example.Exceptions.ValidatorException;
 
 public class StudentValidator implements IValidator<Student> {
 

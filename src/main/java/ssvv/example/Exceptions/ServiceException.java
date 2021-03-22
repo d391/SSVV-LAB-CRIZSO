@@ -1,5 +1,4 @@
-package Exceptions;
-
+package ssvv.example.Exceptions;
 
 public class ServiceException extends RuntimeException {
     String message;

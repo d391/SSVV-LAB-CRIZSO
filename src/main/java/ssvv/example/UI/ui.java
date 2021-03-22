@@ -1,12 +1,14 @@
-package UI;
+package ssvv.example.UI;
 
 import java.io.IOException;
 import java.util.Scanner;
-import Exceptions.*;
-import Service.XMLFileService.AbstractXMLService;
-import Service.XMLFileService.NotaXMLService;
-import Service.XMLFileService.StudentXMLService;
-import Service.XMLFileService.TemaLabXMLService;
+
+import ssvv.example.Exceptions.*;
+import ssvv.example.Service.XMLFileService.AbstractXMLService;
+import ssvv.example.Service.XMLFileService.NotaXMLService;
+import ssvv.example.Service.XMLFileService.StudentXMLService;
+import ssvv.example.Service.XMLFileService.TemaLabXMLService;
+
 
 public class ui {
     StudentXMLService stdSrv;

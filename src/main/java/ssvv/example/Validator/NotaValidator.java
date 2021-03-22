@@ -1,7 +1,7 @@
-package Validator;
+package ssvv.example.Validator;
 
-import Domain.Nota;
-import Exceptions.ValidatorException;
+import ssvv.example.Domain.Nota;
+import ssvv.example.Exceptions.ValidatorException;
 
 public class NotaValidator implements IValidator<Nota> {
 

@@ -1,9 +1,9 @@
-package Repository.XMLFileRepository;
+package ssvv.example.Repository.XMLFileRepository;
 
-import Domain.TemaLab;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import Validator.TemaLabValidator;
+import ssvv.example.Domain.TemaLab;
+import ssvv.example.Validator.TemaLabValidator;
 
 
 public class TemaLabXMLRepo extends AbstractXMLRepo<Integer, TemaLab> {

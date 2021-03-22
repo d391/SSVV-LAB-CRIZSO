@@ -1,10 +1,10 @@
-package Repository.TxtFileRepository;
+package ssvv.example.Repository.TxtFileRepository;
 
-import Domain.HasId;
-import Domain.Nota;
-import Validator.NotaValidator;
+import ssvv.example.Domain.HasId;
+import ssvv.example.Domain.Nota;
+import ssvv.example.Validator.NotaValidator;
 
-import java.io.*;
+import java.io.IOException;
 import java.time.LocalDateTime;
 
 public class NotaFileRepo extends AbstractFileRepository {

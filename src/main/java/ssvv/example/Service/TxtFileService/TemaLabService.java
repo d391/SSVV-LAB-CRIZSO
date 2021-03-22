@@ -1,9 +1,11 @@
-package Service.TxtFileService;
-import Exceptions.ValidatorException;
-import Domain.*;
-import Repository.TxtFileRepository.TemaLabFileRepo;
+package ssvv.example.Service.TxtFileService;
 
-public class TemaLabService extends AbstractService<Integer,TemaLab> {
+
+import ssvv.example.Domain.TemaLab;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.TxtFileRepository.TemaLabFileRepo;
+
+public class TemaLabService extends AbstractService<Integer, TemaLab> {
     //StudentFileRepo stdRepo;
     public TemaLabService(TemaLabFileRepo tmLbRepo){
         super(tmLbRepo);

@@ -1,12 +1,16 @@
-import Exceptions.*;
-import Repository.XMLFileRepository.NotaXMLRepo;
-import Repository.XMLFileRepository.StudentXMLRepo;
-import Repository.XMLFileRepository.TemaLabXMLRepo;
-import Service.XMLFileService.NotaXMLService;
-import Service.XMLFileService.StudentXMLService;
-import Service.XMLFileService.TemaLabXMLService;
-import Validator.*;
-import UI.*;
+package ssvv.example;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.XMLFileRepository.NotaXMLRepo;
+import ssvv.example.Repository.XMLFileRepository.StudentXMLRepo;
+import ssvv.example.Repository.XMLFileRepository.TemaLabXMLRepo;
+import ssvv.example.Service.XMLFileService.NotaXMLService;
+import ssvv.example.Service.XMLFileService.StudentXMLService;
+import ssvv.example.Service.XMLFileService.TemaLabXMLService;
+import ssvv.example.UI.ui;
+import ssvv.example.Validator.NotaValidator;
+import ssvv.example.Validator.StudentValidator;
+import ssvv.example.Validator.TemaLabValidator;
+
 import java.io.IOException;
 
 public class Main {

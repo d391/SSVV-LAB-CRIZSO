@@ -1,5 +1,7 @@
-package Repository;
-import Exceptions.ValidatorException;
+package ssvv.example.Repository;
+
+import ssvv.example.Exceptions.ValidatorException;
+
 /**
  * CRUD operations repository interface
  * @param <ID> - type E must have an attribute of type ID

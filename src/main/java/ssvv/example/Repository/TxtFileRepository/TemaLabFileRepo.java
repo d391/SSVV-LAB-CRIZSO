@@ -1,10 +1,10 @@
-package Repository.TxtFileRepository;
+package ssvv.example.Repository.TxtFileRepository;
 
-import Domain.HasId;
-import Domain.TemaLab;
-import Validator.TemaLabValidator;
+import ssvv.example.Domain.HasId;
+import ssvv.example.Domain.TemaLab;
+import ssvv.example.Validator.TemaLabValidator;
 
-import java.io.*;
+import java.io.IOException;
 
 public class TemaLabFileRepo extends AbstractFileRepository {
     public TemaLabFileRepo(String filename, TemaLabValidator val) throws IOException {

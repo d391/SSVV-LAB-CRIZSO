@@ -1,8 +1,9 @@
-package Service.TxtFileService;
-import Domain.*;
-import Repository.TxtFileRepository.StudentFileRepo;
+package ssvv.example.Service.TxtFileService;
 
-public class StudentService extends AbstractService<String,Student> {
+import ssvv.example.Domain.Student;
+import ssvv.example.Repository.TxtFileRepository.StudentFileRepo;
+
+public class StudentService extends AbstractService<String, Student> {
     //StudentFileRepo stdRepo;
     public StudentService(StudentFileRepo stdRepo){
         super(stdRepo);

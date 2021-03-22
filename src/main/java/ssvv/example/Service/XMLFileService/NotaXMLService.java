@@ -1,11 +1,13 @@
-package Service.XMLFileService;
+package ssvv.example.Service.XMLFileService;
 
-import Domain.*;
-import Repository.XMLFileRepository.NotaXMLRepo;
+import ssvv.example.Domain.Nota;
+import ssvv.example.Domain.TemaLab;
+import ssvv.example.Repository.XMLFileRepository.NotaXMLRepo;
+
 import java.io.*;
 import java.time.LocalDateTime;
 
-public class NotaXMLService extends AbstractXMLService<Integer,Nota>{
+public class NotaXMLService extends AbstractXMLService<Integer, Nota>{
     private NotaXMLRepo xmlrepo;
 
     public NotaXMLService(NotaXMLRepo xmlrepo)  {

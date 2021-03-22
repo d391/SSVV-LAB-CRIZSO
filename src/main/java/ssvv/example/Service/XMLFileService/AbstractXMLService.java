@@ -1,7 +1,8 @@
-package Service.XMLFileService;
-import Domain.*;
-import Exceptions.ValidatorException;
-import Repository.XMLFileRepository.AbstractXMLRepo;
+package ssvv.example.Service.XMLFileService;
+
+import ssvv.example.Domain.HasId;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.XMLFileRepository.AbstractXMLRepo;
 
 public abstract class AbstractXMLService<ID,E extends HasId<ID>> {
     private AbstractXMLRepo xmlrepo;

@@ -1,9 +1,10 @@
-package Repository.MemoryRepository;
+package ssvv.example.Repository.MemoryRepository;
 
-import Domain.HasId;
-import Repository.Repo;
-import Validator.IValidator;
-import Exceptions.ValidatorException;
+import ssvv.example.Domain.HasId;
+import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.Repo;
+import ssvv.example.Validator.IValidator;
+
 import java.util.*;
 public abstract class AbstractCrudRepo<ID,E extends HasId<ID>> implements Repo<ID,E> {
     Map<ID,E> entityes;

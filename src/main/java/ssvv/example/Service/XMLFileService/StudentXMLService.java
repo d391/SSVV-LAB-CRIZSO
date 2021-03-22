@@ -1,9 +1,9 @@
-package Service.XMLFileService;
+package ssvv.example.Service.XMLFileService;
 
-import Domain.Student;
-import Repository.XMLFileRepository.StudentXMLRepo;
+import ssvv.example.Domain.Student;
+import ssvv.example.Repository.XMLFileRepository.StudentXMLRepo;
 
-public class StudentXMLService extends AbstractXMLService<String,Student>{
+public class StudentXMLService extends AbstractXMLService<String, Student>{
     private StudentXMLRepo xmlrepo;
 
     public StudentXMLService(StudentXMLRepo xmlrepo)  {

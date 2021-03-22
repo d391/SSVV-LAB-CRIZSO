@@ -1,9 +1,9 @@
-package Repository.XMLFileRepository;
+package ssvv.example.Repository.XMLFileRepository;
 
-import Domain.Student;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import Validator.StudentValidator;
+import ssvv.example.Domain.Student;
+import ssvv.example.Validator.StudentValidator;
 
 
 public class StudentXMLRepo extends AbstractXMLRepo<String, Student> {
