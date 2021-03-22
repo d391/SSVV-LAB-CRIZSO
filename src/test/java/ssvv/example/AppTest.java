@@ -56,6 +56,7 @@ public class AppTest
         try
         {
             ctrl.add(params);
+            fail();
         }
         catch (IllegalArgumentException | ValidatorException ex)
         {
