@@ -74,6 +74,60 @@ public class AppTest
     }
 
     @Test
+    public void tc_maxBoundaryGroup() {
+        validator = new StudentValidator();
+        repo = new StudentXMLRepo(validator, "ValidStudentTest.xml");
+        ctrl = new StudentXMLService(repo);
+        String[] params={"2","andreea","9999999999999999999999999999999999999999999999999999999999999","email","prof"};
+        try
+        {
+            ctrl.add(params);
+            fail();
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            assertTrue(true);
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Test
+    public void tc_invalidGroup() {
+        validator = new StudentValidator();
+        repo = new StudentXMLRepo(validator, "ValidStudentTest.xml");
+        ctrl = new StudentXMLService(repo);
+        String[] params={"2","noemi","-1","email","prof"};
+        try
+        {
+            ctrl.add(params);
+            fail();
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            assertTrue(true);
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Test
+    public void tc_maxIntGroup() {
+        validator = new StudentValidator();
+        repo = new StudentXMLRepo(validator, "ValidStudentTest.xml");
+        ctrl = new StudentXMLService(repo);
+        String[] params={"3","noemi","2147483647","email","prof"};
+        try
+        {
+            ctrl.add(params);
+            assertTrue(true);
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            fail();
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Test
     public void tc_validHomework() {
         tema_validator = new TemaLabValidator();
         tema_repo = new TemaLabXMLRepo(tema_validator, "ValidTemaTest.xml");
