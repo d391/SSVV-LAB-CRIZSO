@@ -128,7 +128,7 @@ public class AppTest
     }
 
     @Test
-    public void tc_validHomework() {
+    public void tc_validHomework() { // path 3
         tema_validator = new TemaLabValidator();
         tema_repo = new TemaLabXMLRepo(tema_validator, "ValidTemaTest.xml");
         tema_ctrl = new TemaLabXMLService(tema_repo);
@@ -144,7 +144,7 @@ public class AppTest
     }
 
     @Test
-    public void tc_invalidHomework() {
+    public void tc_invalidHomework() { // path 4
         tema_validator = new TemaLabValidator();
         tema_repo = new TemaLabXMLRepo(tema_validator, "ValidTemaTest.xml");
         tema_ctrl = new TemaLabXMLService(tema_repo);
@@ -160,4 +160,23 @@ public class AppTest
             System.out.println(ex.getMessage());
         }
     }
+
+    @Test
+    public void tc_Path1() {
+        tema_validator = new TemaLabValidator();
+        tema_repo = new TemaLabXMLRepo(tema_validator, "Path1_Test.xml");
+        tema_ctrl = new TemaLabXMLService(tema_repo);
+        String[] params = {"","","",""};
+        try
+        {
+            tema_ctrl.add(params);
+            fail();
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            assertTrue(true);
+            System.out.println(ex.getMessage());
+        }
+    }
+
 }
