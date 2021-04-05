@@ -162,11 +162,65 @@ public class AppTest
     }
 
     @Test
-    public void tc_Path1() {
+    public void tc_nullAssignment() {
         tema_validator = new TemaLabValidator();
         tema_repo = new TemaLabXMLRepo(tema_validator, "Path1_Test.xml");
         tema_ctrl = new TemaLabXMLService(tema_repo);
         String[] params = {"","","",""};
+        try
+        {
+            tema_ctrl.add(params);
+            fail();
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            assertTrue(true);
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Test
+    public void tc_invalidDescription() { // path 4
+        tema_validator = new TemaLabValidator();
+        tema_repo = new TemaLabXMLRepo(tema_validator, "ValidTemaTest.xml");
+        tema_ctrl = new TemaLabXMLService(tema_repo);
+        String[] params = {"3","","12","8"};
+        try
+        {
+            tema_ctrl.add(params);
+            fail();
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            assertTrue(true);
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Test
+    public void tc_invalidDeadline() { // path 4
+        tema_validator = new TemaLabValidator();
+        tema_repo = new TemaLabXMLRepo(tema_validator, "ValidTemaTest.xml");
+        tema_ctrl = new TemaLabXMLService(tema_repo);
+        String[] params = {"3","sdf","","8"};
+        try
+        {
+            tema_ctrl.add(params);
+            fail();
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            assertTrue(true);
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Test
+    public void tc_invalidDeliveryWeek() { // path 4
+        tema_validator = new TemaLabValidator();
+        tema_repo = new TemaLabXMLRepo(tema_validator, "ValidTemaTest.xml");
+        tema_ctrl = new TemaLabXMLService(tema_repo);
+        String[] params = {"3","sefg","12",""};
         try
         {
             tema_ctrl.add(params);
