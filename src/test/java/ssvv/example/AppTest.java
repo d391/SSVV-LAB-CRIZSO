@@ -2,10 +2,13 @@ package ssvv.example;
 
 import org.junit.Test;
 import ssvv.example.Exceptions.ValidatorException;
+import ssvv.example.Repository.XMLFileRepository.NotaXMLRepo;
 import ssvv.example.Repository.XMLFileRepository.StudentXMLRepo;
 import ssvv.example.Repository.XMLFileRepository.TemaLabXMLRepo;
+import ssvv.example.Service.XMLFileService.NotaXMLService;
 import ssvv.example.Service.XMLFileService.StudentXMLService;
 import ssvv.example.Service.XMLFileService.TemaLabXMLService;
+import ssvv.example.Validator.NotaValidator;
 import ssvv.example.Validator.StudentValidator;
 import ssvv.example.Validator.TemaLabValidator;
 
@@ -26,6 +29,11 @@ public class AppTest
     private TemaLabXMLRepo tema_repo;
     private TemaLabValidator tema_validator;
     private TemaLabXMLService tema_ctrl;
+
+
+    private NotaXMLRepo nota_repo;
+    private NotaValidator nota_validator;
+    private NotaXMLService nota_ctrl;
 
     @Test
     public void shouldAnswerWithTrue()
@@ -231,6 +239,60 @@ public class AppTest
             assertTrue(true);
             System.out.println(ex.getMessage());
         }
+    }
+
+    @Test
+    public void tc_validGrade() {
+        nota_validator = new NotaValidator();
+        nota_repo = new NotaXMLRepo(nota_validator, "ValidNotaTest.xml");
+        nota_ctrl = new NotaXMLService(nota_repo);
+        String[] params = {"1","3","12","9","2017-01-13T17:09:42.411"};
+        try
+        {
+            nota_ctrl.add(params);
+            assertTrue(true);
+
+        }
+        catch (IllegalArgumentException | ValidatorException ex)
+        {
+            fail();
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    @Test
+    public void tc_addStudent() {
+        tc_validStudent();
+        tc_invalidStudent();
+        tc_maxBoundaryGroup();
+        tc_invalidGroup();
+        tc_maxIntGroup();
+        assertTrue(true);
+    }
+
+    @Test
+    public void tc_addAssignment() {
+        tc_validHomework();
+        tc_invalidHomework();
+        tc_nullAssignment();
+        tc_invalidDeadline();
+        tc_invalidDescription();
+        tc_invalidDeliveryWeek();
+        assertTrue(true);
+    }
+
+    @Test
+    public void tc_addGrade() {
+        tc_validGrade();
+        assertTrue(true);
+    }
+
+    @Test
+    public void tc_all() {
+        tc_addStudent();
+        tc_addAssignment();
+        tc_addGrade();
+        assertTrue(true);
     }
 
 }
