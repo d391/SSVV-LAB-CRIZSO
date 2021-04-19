@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SSVV-LAB-CRIZSO" />
         <module name="Lab2" />
+        <module name="SSVV-LAB-CRIZSO" />
       </profile>
     </annotationProcessing>
   </component>

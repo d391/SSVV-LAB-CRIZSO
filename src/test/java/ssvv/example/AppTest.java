@@ -295,4 +295,25 @@ public class AppTest
         assertTrue(true);
     }
 
+    @Test
+    public void tc_integration1() {
+        tc_addStudent();
+        assertTrue(true);
+    }
+
+    @Test
+    public void tc_integration2() {
+        tc_addStudent();
+        tc_addAssignment();
+        assertTrue(true);
+    }
+
+    @Test
+    public void tc_integration3() {
+        tc_addStudent();
+        tc_addAssignment();
+        tc_addGrade();
+        assertTrue(true);
+    }
+
 }
